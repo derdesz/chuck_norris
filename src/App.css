@@ -1,0 +1,124 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.background-image {
+  width: 1300px;
+  height: auto;
+  /* height: 100%; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* height: 40vmin;
+  pointer-events: none; */
+}
+
+.enter{
+  animation: pulse 1s infinite;
+  position: absolute;
+  top: 190px;
+  left: 500px;
+  max-width: 16%; 
+  height:auto;
+}
+
+
+
+
+#frame-image {
+  width: 100%;
+  position: absolute;
+  vertical-align: middle;
+  margin-top: -15%;
+  margin-left: -5%;
+  left: 7%; 
+  align-items: center;
+  max-width: 100%; 
+  height:auto;
+}
+
+/* .App.frame-div {
+  position: absolute;
+  vertical-align: middle;
+  text-align: center;
+  
+} */
+
+/* Bottom right text */
+#text {
+  vertical-align: middle;
+  position: absolute;
+  margin-top: 35%;
+  margin-left: 52%;
+  /* top: 50%;
+  left: 50%; */
+  transform: translate(-50%,-50%);
+  width: 250px;
+  
+}
+
+.refresh-button {
+  width: 20%;
+  height: auto;
+  position: absolute;
+  margin-left: -20%;
+  margin-top: 55%;
+  cursor: pointer;
+}
+
+
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.9);
+		
+	}
+
+	70% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(0.9);
+	}
+}
+
+
+
+.App-header {
+  height: 100%;
+  margin: 0;
+  /* background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white; */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
