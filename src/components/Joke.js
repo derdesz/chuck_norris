@@ -42,9 +42,16 @@ class Joke extends Component {
     return (
         <header className="App-header">
             <img src={main} alt="" className="background-image" id="main"/>
-            <img src={frame} alt="frame" id="frame-image"/>
-            <p id="text">{this.state.joke}</p>
-            <img src={refresh} alt="" className="refresh-button" onClick={this.refreshPage}/>
+            <div id="container">
+
+              <div id="dialogbox">
+                <img src={frame} alt="frame" id="frame-image"/>
+                <p id="text">{this.state.joke}</p>
+              </div>
+              
+              <img src={refresh} alt="" className="refresh-button" onClick={this.refreshPage}/>
+            </div>
+            
         </header>
     
     );
