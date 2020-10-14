@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import frame from '/Users/erdeszdora/Desktop/ADVANCED projects/ChuckNorris/chuck_norris_2/src/frame.png';
-import Homepage from '/Users/erdeszdora/Desktop/ADVANCED projects/ChuckNorris/chuck_norris_2/src/components/Homepage.js';
-import main from '/Users/erdeszdora/Desktop/ADVANCED projects/ChuckNorris/chuck_norris_2/src/main_dark.jpg';
+import frame from '../frame.png';
+import Homepage from './Homepage.js';
+import main from '../main_dark.jpg';
 import { Link } from 'react-router-dom';
-import refresh from '/Users/erdeszdora/Desktop/ADVANCED projects/ChuckNorris/chuck_norris_2/src/refresh.png';
+import refresh from '../refresh.png';
 
 
 class Joke extends Component {

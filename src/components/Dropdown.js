@@ -1,16 +1,8 @@
 import React, { Component } from 'react';
-import uuid from 'react-uuid';
 import shortid from 'shortid';
 
 class Dropdown extends Component {
-    // constructor(props) {
-    //   super(props);
-    //   this.state = {
-    //     categories: [],
-    //     isLoading: false,
-    //   }
-    //   this.handleChange = this.handleChange.bind(this)
-    // }
+
     state = {
         categories: [],
         isLoading: false
