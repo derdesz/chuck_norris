@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import main from '/Users/erdeszdora/Desktop/ADVANCED projects/ChuckNorris/chuck_norris_2/src/main.jpg';
-import enter from '/Users/erdeszdora/Desktop/ADVANCED projects/ChuckNorris/chuck_norris_2/src/enter.png'
+import main from '../main.jpg';
+import enter from '../enter.png'
 import { useHistory } from "react-router-dom";
 import {Link} from "react-router-dom";
 
