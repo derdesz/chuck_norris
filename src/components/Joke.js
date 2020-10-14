@@ -1,54 +1,32 @@
-import React, { Component } from "react";
-import frame from '../frame.png';
-import Homepage from './Homepage.js';
-import main from '../main_dark.jpg';
-import { Link } from 'react-router-dom';
-import refresh from '../refresh.png';
+import React, { Component, useContext, useState } from "react";
+import frame from "../frame.png";
+import main from "../main_dark.jpg";
+import refresh from "../refresh.png";
+import { Categories } from "./Categories";
+import { RandomJokeContext } from "./GetRandomJoke";
+import { JokeByCategoryContext } from "./GetJokeByCategory";
 
+export const Joke = (props) => {
+  const randomjoke = useContext(RandomJokeContext);
 
-class Joke extends Component {
-  state = {
-    joke: "",
-    isLoading: false,
+  const refreshPage = () => {
+    window.location.reload(false);
   };
 
-  refreshPage = () => {
-    window.location.reload(false);
-  }
+  let content = (
+    <div>
+      <Categories />
+      <img src={main} alt="" className="background-image" id="main" />
+      <img src={frame} alt="frame" id="frame-image" />
+      <p id="text">{randomjoke}</p>
+      <img
+        src={refresh}
+        alt=""
+        className="refresh-button"
+        onClick={refreshPage}
+      />
+    </div>
+  );
 
-  componentDidMount() {
-    this.setState({ isLoading: true });
-
-    fetch("https://api.chucknorris.io/jokes/random")
-      .then((res) => res.json())
-      .then(
-        (data) => {
-          this.setState({
-            joke: data.value
-          });
-        },
-
-        (error) => {
-          this.setState({
-            error
-          });
-        }
-      );
-  }
-
- 
-
-  render() {
-    return (
-        <header className="App-header">
-            <img src={main} alt="" className="background-image" id="main"/>
-            <img src={frame} alt="frame" id="frame-image"/>
-            <p id="text">{this.state.joke}</p>
-            <img src={refresh} alt="" className="refresh-button" onClick={this.refreshPage}/>
-        </header>
-    
-    );
-  }
-}
-
-export default Joke;
+  return content;
+};

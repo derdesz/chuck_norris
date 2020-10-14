@@ -1,13 +1,32 @@
-import React, { Component } from "react";
+import React, { useEffect, createContext, useState } from "react";
+import button from "../refresh.png";
+import { GetJokeByCategory } from "./GetJokeByCategory";
 
-class CategoryItem extends Component {
-  render() {
-    return (
-      <div classname="category-item">
-        <p>{this.props.category}</p>
+// export const ChosenCategoryContext = createContext();
+
+export const CategoryItem = (props) => {
+  const [chosencategory, setChosenCategory] = useState("");
+  const { category } = props;
+
+  const handleClick = (e) => {
+    setChosenCategory(e.target.id);
+    console.log(chosencategory);
+  };
+
+  return (
+    <div>
+      <div className="category-button">
+        <img
+          src={button}
+          id={category}
+          alt=""
+          className="button-image"
+          onClick={handleClick}
+          style={{ cursor: "pointer" }}
+        />
+        <h2 className="category-text">{category}</h2>
       </div>
-    );
-  }
-}
-
-export default CategoryItem;
+      <GetJokeByCategory chosencategory={chosencategory} />
+    </div>
+  );
+};

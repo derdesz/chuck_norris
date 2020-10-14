@@ -1,40 +1,19 @@
-import React, { Component } from "react";
-import CategoryItem from "./CategoryItem";
+import React, { Component, useContext, useState } from "react";
+import { CategoryItem } from "./CategoryItem";
+import { CategoryContext } from "./GetCategories";
 
-class Categories extends Component {
-  state = {
-    categories: [],
-  };
+export const Categories = (props) => {
+  const [categories] = useContext(CategoryContext);
 
-  getCategories = () => {
-    fetch("https://api.chucknorris.io/jokes/categories")
-      .then((res) => res.json())
-      .then(
-        (data) => {
-          this.setState({
-            categories: data,
-          });
-        },
+  console.log(categories);
 
-        (error) => {
-          this.setState({
-            error,
-          });
-        }
-      );
-  };
+  let content = (
+    <div>
+      {categories.map((category) => (
+        <CategoryItem key={category} category={category} />
+      ))}
+    </div>
+  );
 
-  render() {
-    this.getCategories();
-    return this.state.categories.map((category) => (
-      <div className="ui selection dropdown error">
-        {/* Dropdown <i className="dropdown icon"></i> */}
-        <div className="menu">
-          <CategoryItem category={category} />
-        </div>
-      </div>
-    ));
-  }
-}
-
-export default Categories;
+  return content;
+};
