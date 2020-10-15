@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import frame from '/Users/erdeszdora/Desktop/ADVANCED projects/ChuckNorris/chuck_norris_2/src/frame.png';
-import Homepage from '/Users/erdeszdora/Desktop/ADVANCED projects/ChuckNorris/chuck_norris_2/src/components/Homepage.js';
-import main from '/Users/erdeszdora/Desktop/ADVANCED projects/ChuckNorris/chuck_norris_2/src/main_dark.jpg';
+import frame from '../frame.png';
+import Homepage from './Homepage.js';
+import main from '../main_dark.jpg';
 import { Link } from 'react-router-dom';
-import refresh from '/Users/erdeszdora/Desktop/ADVANCED projects/ChuckNorris/chuck_norris_2/src/refresh.png';
+import refresh from '../refresh.png';
 
 
 class Joke extends Component {
@@ -42,9 +42,16 @@ class Joke extends Component {
     return (
         <header className="App-header">
             <img src={main} alt="" className="background-image" id="main"/>
-            <img src={frame} alt="frame" id="frame-image"/>
-            <p id="text">{this.state.joke}</p>
-            <img src={refresh} alt="" className="refresh-button" onClick={this.refreshPage}/>
+            <div id="container">
+
+              <div id="dialogbox">
+                <img src={frame} alt="frame" id="frame-image"/>
+                <p id="text">{this.state.joke}</p>
+              </div>
+              
+              <img src={refresh} alt="" className="refresh-button" onClick={this.refreshPage}/>
+            </div>
+            
         </header>
     
     );
