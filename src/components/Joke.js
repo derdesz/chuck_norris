@@ -17,14 +17,15 @@ export const Joke = (props) => {
     <div>
       <Categories />
       <img src={main} alt="" className="background-image" id="main" />
-      <img src={frame} alt="frame" id="frame-image" />
-      <p id="text">{randomjoke}</p>
-      <img
-        src={refresh}
-        alt=""
-        className="refresh-button"
-        onClick={refreshPage}
-      />
+      <div id="container">
+            
+        <div id="dialogbox">
+          <img src={frame} alt="frame" id="frame-image"/>
+          <p id="text">{randomjoke}</p>
+        </div>
+
+        <img src={refresh} alt="" className="refresh-button" onClick={refreshPage}/>
+      </div>
     </div>
   );
 
