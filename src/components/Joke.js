@@ -8,6 +8,7 @@ import { JokeByCategoryContext } from "./GetJokeByCategory";
 
 export const Joke = (props) => {
   const randomjoke = useContext(RandomJokeContext);
+  const jokeByCategory = useContext(JokeByCategoryContext);
 
   const refreshPage = () => {
     window.location.reload(false);

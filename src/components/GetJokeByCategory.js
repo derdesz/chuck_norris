@@ -13,6 +13,8 @@ export const GetJokeByCategory = (props) => {
     axios
       .get("https://api.chucknorris.io/jokes/random?" + chosenCategory)
       .then((response) => {
+        if (!response.data.categories.includes(chosenCategory)) {
+        }
         setJokeByCategory(response.data.value);
         console.log(response.data.value);
       });
