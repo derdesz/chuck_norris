@@ -3,7 +3,7 @@ import frame from "../frame.png";
 import main from "../main_dark.jpg";
 import refresh from "../refresh.png";
 import { Categories } from "./Categories";
-import { RandomJokeContext } from "./GetRandomJoke";
+import { RandomJokeContext, RandomJokeProvider } from "./GetRandomJoke";
 import { JokeByCategoryContext } from "./GetJokeByCategory";
 
 export const Joke = (props) => {

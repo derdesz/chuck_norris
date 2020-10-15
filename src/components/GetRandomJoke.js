@@ -6,19 +6,20 @@ export const RandomJokeContext = createContext();
 
 export const RandomJokeProvider = (props) => {
 
-    const [category, setCategory] = useState("");
+    const [joke, setJoke] = useState("");
     
     useEffect(() => {
       axios
         .get("https://api.chucknorris.io/jokes/random")
         .then((response) => {
-            setCategory(response.data)
+            setJoke(response.data.value)
+            console.log("Random joke: " + response.data.value);
         })
-        console.log(category);
+        
     }, [])
 
     return (
-        <RandomJokeContext.Provider value={[category, setCategory]}>
+        <RandomJokeContext.Provider value={[joke, setJoke]}>
             {props.children}
         </RandomJokeContext.Provider>
     );

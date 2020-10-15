@@ -5,6 +5,7 @@ import Homepage from "./components/Homepage";
 import { Joke } from "./components/Joke";
 import "./App.css";
 import { CategoryProvider, GetCategory } from "./components/GetCategories";
+import { RandomJokeProvider } from "./components/GetRandomJoke";
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
       <div className="App">
         <Route exact path="/" component={Homepage} />
         <CategoryProvider>
-          <Route path="/joke" render={(props) => <Joke />} />
+          <RandomJokeProvider>
+            <Route path="/joke" render={(props) => <Joke />} />
+          </RandomJokeProvider>
         </CategoryProvider>
       </div>
     </Router>
