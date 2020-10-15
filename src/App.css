@@ -39,7 +39,7 @@ html {
   position: relative;
   width: 50%;
   height: 100%;
-  top: 100px;
+  top: 200px;
   left: 25%;
   right: 25%;
   display: flow-root;
@@ -73,35 +73,14 @@ html {
 
 /* Bottom right text */
 #text {
-  vertical-align: middle;
   text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width:600px;
-  
 }
 
-/* .category-button {
-  background: url("refresh.png");
-  text-align: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  z-index: 1;
-  width: 50%;
-  height: auto;
-} */
 
-.button-image {
-  width: 50%;
-  height: auto;
-}
-
-.category-text {
-  position: absolute;
-  z-index: 1;
-}
 
 @keyframes spin {
   from {
@@ -166,4 +145,37 @@ html {
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.button-image {
+  width: 50%;
+  height: auto;
+}
+
+.category-text {
+  position: relative;
+  z-index: 1;
+  margin-top: -10px;
+}
+
+#category-container{
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0;
+}
+
+.category-box{
+  color: white;
+  padding-right: 100px;
+}
+
+.category-button {
+  background: url("refresh.png");
+  position: absolute;
+  z-index: 1;
+  width: 20%;
+  height: auto;
 }

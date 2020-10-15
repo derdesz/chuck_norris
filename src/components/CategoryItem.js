@@ -14,7 +14,7 @@ export const CategoryItem = (props) => {
   };
 
   return (
-    <div>
+    <div className="category-box">
       <div className="category-button">
         <img
           src={button}
