@@ -12,7 +12,6 @@ export const CategoryProvider = (props) => {
       .then((response) => {
         setCategories(response.data);
       });
-    console.log(categories);
   }, []);
 
   return (

@@ -4,7 +4,6 @@ import main from "../main_dark.jpg";
 import refresh from "../refresh.png";
 import { Categories } from "./Categories";
 import { RandomJokeContext, RandomJokeProvider } from "./GetRandomJoke";
-import { JokeByCategoryContext } from "./GetJokeByCategory";
 
 export const Joke = (props) => {
   const randomjoke = useContext(RandomJokeContext);

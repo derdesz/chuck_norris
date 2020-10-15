@@ -1,5 +1,5 @@
 import React, { useEffect, createContext, useState } from "react";
-import button from "../refresh.png";
+import button from "../category_button.png";
 import { GetJokeByCategory } from "./GetJokeByCategory";
 
 // export const ChosenCategoryContext = createContext();

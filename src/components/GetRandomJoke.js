@@ -13,7 +13,6 @@ export const RandomJokeProvider = (props) => {
         .get("https://api.chucknorris.io/jokes/random")
         .then((response) => {
             setJoke(response.data.value)
-            console.log("Random joke: " + response.data.value);
         })
         
     }, [])
